@@ -2,14 +2,14 @@
 
 pipeline:
   build:
-    image: golang
+    image: busybox
     commands:
-      - go get
-      - go build
-      - go test
+      - echo $PWD
+      - ls
+      - find .
 
-services:
-  postgres:
-    image: postgres:9.4.5
-    environment:
-      - POSTGRES_USER=myapp
+#services:
+#  postgres:
+#    image: postgres:9.4.5
+#    environment:
+#      - POSTGRES_USER=myapp
